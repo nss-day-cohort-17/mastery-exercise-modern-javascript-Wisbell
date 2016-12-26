@@ -103,3 +103,11 @@ body {
   padding: 0 50px 0 20px;
   border-radius: 0 5px 5px 0;
 }
+
+/*
+  Player Setup Theme
+*/
+
+#player-setup {
+  background: url(https://teeimp.com/wp-content/uploads/2016/05/Thunderdome-Closeup.jpg);
+}
