@@ -1,42 +1,105 @@
-
 body {
   font-family: "Lato", "Helvetica", "sans-serif";
   margin: 0;
-  /*padding: 10px;*/
+  padding: 10px;
   font-size: 3em;
 }
 
-/* Starting display */
-/*----------------------*/
-/*     Player Setup     */
-/*----------------------*/
+.field {
+  margin: 20px 0 0 0;
+}
 
-
-/* http://stackoverflow.com/questions/39196409/background-image-resizing-issue */
-#player-setup {
-    color: white;
-
-
-    top: 0; right: 0; bottom: 0; left: 0;
-    position: relative;
-
-    /*background-image: url("../images/thunderdome.jpg");*/
-    /*background-image: url("https://johnkennethmuir.files.wordpress.com/2010/12/thunderdome5.jpg");*/
-
-    background-image: url("http://wastelandweekend.com/wp-content/uploads/dome1-1024x683.jpg");
-    background-size: cover;
-    text-align: center;
-    min-height: 100vh;
-    min-width: 90vw;
+.field__textinput {
+  font-size: 1em;
+  padding: 15px 0;
+  text-align: center;
+  min-width: 500px;
 }
 
 
-.player-setup--welcome {
-    text-align: center;
+
+/*
+  Section styles
+ */
+.card {
+  display: none;
 }
 
-.player-setup--battle-button {
-    position: fixed;
-    bottom: 0;
-    text-align: center;
+.card__prompt {
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card__button {
+  font-size: 1.1em;
+  margin: 30px 0 0 0;
+  text-align: center;
+}
+
+
+/*
+  Button styles
+ */
+
+.btn {
+  text-decoration: none;
+  background-color: white;
+  color: #888;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 5px;
+  min-width: 260px;
+}
+
+.btn--orange {
+  border-color: #FF4136;
+  color: white;
+  background-color: #FF4136;
+}
+
+.btn--blue {
+  border-color: #0074D9;
+  color: white;
+  background-color: #0074D9;
+}
+
+.btn--yellow {
+  border-color: #E4BD00;
+  color: white;
+  background-color: #F3C500;
+}
+
+.btn--big {
+  font-size: 28px;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.btn--small {
+  min-width: 50px;
+}
+
+.btn__prompt {
+  background-color: white;
+  color: #fff;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: -10px;
+  font-weight: 600;
+  background-color: #333;
+  opacity: .4;
+  border-radius: 5px 0 0 5px;
+  left: 37px;
+  float: left;
+}
+
+.btn__text {
+  padding: 0 50px 0 20px;
+  border-radius: 0 5px 5px 0;
 }
