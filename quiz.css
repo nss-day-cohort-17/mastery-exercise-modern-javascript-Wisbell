@@ -3,6 +3,8 @@ body {
   margin: 0;
   padding: 10px;
   font-size: 3em;
+
+  background-color: black;
 }
 
 .field {
@@ -109,5 +111,24 @@ body {
 */
 
 #player-setup {
-  background: url(https://teeimp.com/wp-content/uploads/2016/05/Thunderdome-Closeup.jpg);
+
+    color: tomato;
+
+    top: 0; right: 0; bottom: 0; left: 0;
+    position: relative;
+
+    /*background-image: url("../images/thunderdome.jpg");*/
+    /*background-image: url("https://johnkennethmuir.files.wordpress.com/2010/12/thunderdome5.jpg");*/
+
+    /*background-image: url("http://d2rormqr1qwzpz.cloudfront.net/photos/2015/06/29/77694-2857922079_d01e6bd668_o.jpg");*/
+
+    /*background: url(images/bg.jpg) no-repeat center center fixed;*/
+    background: url(https://teeimp.com/wp-content/uploads/2016/05/Thunderdome-Closeup.jpg) no-repeat center center fixed;
+    /*background-size: cover;*/
+    background-size: contain;
+    text-align: center;
+    min-height: 95vh;
+    min-width: 95vw;
+
+
 }
