@@ -17,6 +17,8 @@
 // var spell = new Gauntlet.SpellBook.Sphere();
 // console.log("spell: ", spell.toString());
 
+//var test_terminator = new RobotThunderdome.RobotCombatant.HumanoidModelTerminator("Termie");
+
 /* Animation library? https://daneden.github.io/animate.css/ */
 
 $(document).ready(function() {
@@ -59,5 +61,23 @@ $(document).ready(function() {
     $(".card").hide();
     $("." + previousCard).show();
   });
+
+
+
+  // From MDN Docs ---->
+  // Returns a random integer between min (included) and max (included)
+  // Using Math.round() will give you a non-uniform distribution!
+
+  function getDamage(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+   function getHealth(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
 });

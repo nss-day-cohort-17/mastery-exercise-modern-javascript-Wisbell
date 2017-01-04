@@ -1,23 +1,76 @@
 var RobotThunderdome = RobotThunderdome || {};
+RobotThunderdome.RobotComatant = {};
 
+// Define Base Robot Combatan
 
 RobotThunderdome.RobotCombatant.Player = function(name) {
-    this.playerName = name;
+    this.playerName = "Steve";
 
-    this.health = 50;
+    this.health = null;
     this.type = null;
+    this.attackName = null;
     this.damage = null;
     this.image = null;
+    this.uniqueProperty = null;
 }
 
+// Define Robot Types
 
-RobotThunderdome.RobotCombatant.Player.prototype.generateType = function (){
-    var random = Math.round(Math.random() * (this.allowedTypes.length -1))
-
-    var randomType = this.allowedTypes[random];
-
-    this.type = new RobotThunderdome.RobotType[randomType]()
+RobotThunderdome.RobotCombatant.Humanoid = function() {
+    this.type = "Humanoid";
+    this.model = null;
+    this.uniqueProperty = {"Regenerate Health":
+        function regenerateHealth(){
+            this.health = this.health + 10;
+        }
+    }
 }
+
+RobotThunderdome.RobotCombatant.Humanoid.prototype = new RobotThunderdome.RobotCombatant.Player();
+
+RobotThunderdome.RobotCombatant.Mechanical = function() {
+    this.type = "Mechanical";
+    this.model = null;
+    this.uniqueProperty = {"Increased Durability":
+        function addMaxHealth(){
+            this.health = this.health + 50;
+        }
+    }
+}
+
+RobotThunderdome.RobotCombatant.Mechanical.prototype = new RobotThunderdome.RobotCombatant.Player();
+
+RobotThunderdome.RobotCombatant.Dota2 = function() {
+    this.type = "Dota2";
+    this.model = null;
+    this.uniqueProperty = {"Increased Damage":
+        function addMaxDamage(){
+            this.damage = this.damage + 10;
+        }
+    }
+}
+
+RobotThunderdome.RobotCombatant.Dota2.prototype = new RobotThunderdome.RobotCombatant.Player();
+
+// Define Robot Type Models
+
+RobotThunderdome.RobotCombatant.HumanoidModelWestWorld = function() {
+    this.model = "Bernard Lowe";
+    this.attackName = "Reprogram";
+    this.damage = getEnemyRobotsDamage();
+}
+
+RobotThunderdome.RobotCombatant.HumanoidModelWestWorld.prototype = new RobotThunderdome.RobotCombatant.Humanoid();
+
+RobotThunderdome.RobotCombatant.HumanoidModelTerminator = function() {
+    this.model = "Terminator";
+    this.attackName = "Shotgun";
+    this.damage = getDamage(30, 40);
+    this.health = getHealth(100, 200);
+}
+
+RobotThunderdome.RobotCombatant.HumanoidModelTerminator.prototype = new RobotThunderdome.RobotCombatant.Humanoid();
+
 
 /*
 
@@ -73,3 +126,4 @@ Robot game
 
                 has damage
                 has special attack
+*/
