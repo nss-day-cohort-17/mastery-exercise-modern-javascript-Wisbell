@@ -1,7 +1,7 @@
-var RobotWarriorGame = RobotWarriorGame || {};
+var RobotThunderdome = RobotThunderdome || {};
 
 
-RobotWarriorGame.RobotCombatant.Player = function(name) {
+RobotThunderdome.RobotCombatant.Player = function(name) {
     this.playerName = name;
 
     this.health = 50;
@@ -11,12 +11,12 @@ RobotWarriorGame.RobotCombatant.Player = function(name) {
 }
 
 
-RobotWarriorGame.RobotCombatant.Player.prototype.generateType = function (){
+RobotThunderdome.RobotCombatant.Player.prototype.generateType = function (){
     var random = Math.round(Math.random() * (this.allowedTypes.length -1))
 
     var randomType = this.allowedTypes[random];
 
-    this.type = new RobotWarriorGame.RobotType[randomType]()
+    this.type = new RobotThunderdome.RobotType[randomType]()
 }
 
 /*

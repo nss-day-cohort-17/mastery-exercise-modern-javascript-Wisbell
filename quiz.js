@@ -34,14 +34,14 @@ $(document).ready(function() {
     var moveAlong = false;
 
     switch (nextCard) {
-      case "card--class":
-        moveAlong = ($("#player-name").val() !== "");
-        break;
-      case "card--weapon":
-        moveAlong = ($("#player-name").val() !== "");
-        break;
+      // case "card--class":
+      //   moveAlong = ($("#player-name").val() !== "");
+      //   break;
+      // case "card--weapon":
+      //   moveAlong = ($("#player-name").val() !== "");
+      //   break;
       case "card--battleground":
-        moveAlong = ($("#player-name").val() !== "");
+        moveAlong = ($("#player-name").val() !== "" && $('#enemy-name').val() !== "");
         break;
     }
 
