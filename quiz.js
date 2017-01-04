@@ -17,7 +17,9 @@
 // var spell = new Gauntlet.SpellBook.Sphere();
 // console.log("spell: ", spell.toString());
 
-//var test_terminator = new RobotThunderdome.RobotCombatant.HumanoidModelTerminator("Termie");
+var testRobot = new Thunderdome.Robots.HumanoidModelTerminator("Termie");
+var playerRobot;
+var enemyRobot;
 
 /* Animation library? https://daneden.github.io/animate.css/ */
 
@@ -64,20 +66,25 @@ $(document).ready(function() {
 
 
 
-  // From MDN Docs ---->
-  // Returns a random integer between min (included) and max (included)
-  // Using Math.round() will give you a non-uniform distribution!
+  // Add Event listener to Scrap Some Metal Button
+  $('.beginBattle').click(function () {
+    console.log("Scrap Some Metal button clicked")
 
-  function getDamage(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+    if($("#player-name").val() !== "" && $('#enemy-name').val() !== "") {
+      console.log("Both inputs have names")
 
-   function getHealth(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+      // Create instance for selected player robot
+      switch () {
+        case "stuff":
+          playerRobot = new . . .
+        case "stuff2":
+          playerRobot = new . . .
+      }
+
+
+      // Create instance for selected enemy robot
+    }
+
+  })
 
 });

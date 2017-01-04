@@ -1,9 +1,28 @@
-var RobotThunderdome = RobotThunderdome || {};
-RobotThunderdome.RobotComatant = {};
+ // From MDN Docs ---->
+  // Returns a random integer between min (included) and max (included)
+  // Using Math.round() will give you a non-uniform distribution!
+
+  function getDamage(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+   function getHealth(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+
+
+
+var Thunderdome = Thunderdome || {};
+Thunderdome.Robots = {};
 
 // Define Base Robot Combatan
 
-RobotThunderdome.RobotCombatant.Player = function(name) {
+Thunderdome.Robots.Player = function(name) {
     this.playerName = "Steve";
 
     this.health = null;
@@ -16,7 +35,7 @@ RobotThunderdome.RobotCombatant.Player = function(name) {
 
 // Define Robot Types
 
-RobotThunderdome.RobotCombatant.Humanoid = function() {
+Thunderdome.Robots.Humanoid = function() {
     this.type = "Humanoid";
     this.model = null;
     this.uniqueProperty = {"Regenerate Health":
@@ -26,9 +45,9 @@ RobotThunderdome.RobotCombatant.Humanoid = function() {
     }
 }
 
-RobotThunderdome.RobotCombatant.Humanoid.prototype = new RobotThunderdome.RobotCombatant.Player();
+Thunderdome.Robots.Humanoid.prototype = new Thunderdome.Robots.Player();
 
-RobotThunderdome.RobotCombatant.Mechanical = function() {
+Thunderdome.Robots.Mechanical = function() {
     this.type = "Mechanical";
     this.model = null;
     this.uniqueProperty = {"Increased Durability":
@@ -38,9 +57,9 @@ RobotThunderdome.RobotCombatant.Mechanical = function() {
     }
 }
 
-RobotThunderdome.RobotCombatant.Mechanical.prototype = new RobotThunderdome.RobotCombatant.Player();
+Thunderdome.Robots.Mechanical.prototype = new Thunderdome.Robots.Player();
 
-RobotThunderdome.RobotCombatant.Dota2 = function() {
+Thunderdome.Robots.Dota2 = function() {
     this.type = "Dota2";
     this.model = null;
     this.uniqueProperty = {"Increased Damage":
@@ -50,26 +69,26 @@ RobotThunderdome.RobotCombatant.Dota2 = function() {
     }
 }
 
-RobotThunderdome.RobotCombatant.Dota2.prototype = new RobotThunderdome.RobotCombatant.Player();
+Thunderdome.Robots.Dota2.prototype = new Thunderdome.Robots.Player();
 
 // Define Robot Type Models
 
-RobotThunderdome.RobotCombatant.HumanoidModelWestWorld = function() {
+Thunderdome.Robots.HumanoidModelWestWorld = function() {
     this.model = "Bernard Lowe";
     this.attackName = "Reprogram";
     this.damage = getEnemyRobotsDamage();
 }
 
-RobotThunderdome.RobotCombatant.HumanoidModelWestWorld.prototype = new RobotThunderdome.RobotCombatant.Humanoid();
+Thunderdome.Robots.HumanoidModelWestWorld.prototype = new Thunderdome.Robots.Humanoid();
 
-RobotThunderdome.RobotCombatant.HumanoidModelTerminator = function() {
+Thunderdome.Robots.HumanoidModelTerminator = function() {
     this.model = "Terminator";
     this.attackName = "Shotgun";
     this.damage = getDamage(30, 40);
     this.health = getHealth(100, 200);
 }
 
-RobotThunderdome.RobotCombatant.HumanoidModelTerminator.prototype = new RobotThunderdome.RobotCombatant.Humanoid();
+Thunderdome.Robots.HumanoidModelTerminator.prototype = new Thunderdome.Robots.Humanoid();
 
 
 /*
