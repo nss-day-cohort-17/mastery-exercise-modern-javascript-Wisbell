@@ -68,19 +68,37 @@ $(document).ready(function() {
 
   // Add Event listener to Scrap Some Metal Button
   $('.beginBattle').click(function () {
-    console.log("Scrap Some Metal button clicked")
+    console.log("Scrap Some Metal button clicked");
 
     if($("#player-name").val() !== "" && $('#enemy-name').val() !== "") {
-      console.log("Both inputs have names")
+      console.log("Both inputs have names");
+
+      var selectedPlayerRobot = $(".player-robot").val();
+      console.log("selected player robot", selectedPlayerRobot);
 
       // Create instance for selected player robot
-      switch () {
-        case "stuff":
-          playerRobot = new . . .
-        case "stuff2":
-          playerRobot = new . . .
-      }
 
+      switch (selectedPlayerRobot) {
+        case "Humanoid: Bernard Lowe":
+          playerRobot = new Thunderdome.Robots.HumanoidModelWestWorld($("#player-name").val());
+          console.log(playerRobot)
+          break;
+        case "Humanoid: Terminator":
+          playerRobot = new Thunderdome.Robots.HumanoidModelTerminator($("#player-name").val());
+          break;
+        case "Mechanical: Johnny 5":
+          playerRobot = "test2";
+          break;
+        case "Mechanical: R2D2":
+          playerRobot = "test2";
+          break;
+        case "Dota2: Tinker":
+          playerRobot = "test2";
+          break;
+        case "Dota2: Clockwerk Goblin":
+          playerRobot = "test2";
+          break;
+      }
 
       // Create instance for selected enemy robot
     }
