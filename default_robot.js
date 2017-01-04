@@ -23,8 +23,7 @@ Thunderdome.Robots = {};
 // Define Base Robot Combatan
 
 Thunderdome.Robots.Player = function(name) {
-    this.playerName = name; //|| "Unknown Robot";
-
+    this.playerName = name
     this.health = null;
     this.type = null;
     this.attackName = null;
@@ -73,16 +72,20 @@ Thunderdome.Robots.Dota2.prototype = new Thunderdome.Robots.Player();
 
 // Define Robot Type Models
 
-Thunderdome.Robots.HumanoidModelWestWorld = function() {
+Thunderdome.Robots.HumanoidModelWestWorld = function(name) {
+    Thunderdome.Robots.Player.call(this, name)
     this.model = "Bernard Lowe";
     this.attackName = "Reprogram";
     this.damage = getDamage(20, 30);; //getEnemyRobotsDamage();
     this.health = getHealth(100, 150);
 }
 
+new Thunderdome.Robot.Player(newNameHere)
+
 Thunderdome.Robots.HumanoidModelWestWorld.prototype = new Thunderdome.Robots.Humanoid();
 
-Thunderdome.Robots.HumanoidModelTerminator = function() {
+Thunderdome.Robots.HumanoidModelTerminator = function(name) {
+    this.playerName = name;
     this.model = "Terminator";
     this.attackName = "Shotgun";
     this.damage = getDamage(30, 40);

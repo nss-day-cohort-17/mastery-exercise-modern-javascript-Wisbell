@@ -87,16 +87,16 @@ $(document).ready(function() {
           playerRobot = new Thunderdome.Robots.HumanoidModelTerminator($("#player-name").val());
           break;
         case "Mechanical: Johnny 5":
-          playerRobot = "test2";
+          playerRobot = new Thunderdome.Robots.MechanicalModelWestWorld($("#player-name").val());
           break;
         case "Mechanical: R2D2":
-          playerRobot = "test2";
+          playerRobot = new Thunderdome.Robots.MechanicalModelWestWorld($("#player-name").val());
           break;
         case "Dota2: Tinker":
-          playerRobot = "test2";
+          playerRobot = new Thunderdome.Robots.HumanoidModelWestWorld($("#player-name").val());
           break;
         case "Dota2: Clockwerk Goblin":
-          playerRobot = "test2";
+          playerRobot = new Thunderdome.Robots.HumanoidModelWestWorld($("#player-name").val());
           break;
       }
 
