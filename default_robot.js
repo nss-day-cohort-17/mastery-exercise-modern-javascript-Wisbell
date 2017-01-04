@@ -1,7 +1,7 @@
-var RobotWarrior = RobotWarrior || {};
+var RobotWarriorGame = RobotWarriorGame || {};
 
 
-RobotWarrior.RobotCombatant.Player = function(name) {
+RobotWarriorGame.RobotCombatant.Player = function(name) {
     this.playerName = name;
 
     this.health = 50;
@@ -11,12 +11,12 @@ RobotWarrior.RobotCombatant.Player = function(name) {
 }
 
 
-RobotWarrior.RobotCombatant.Player.prototype.generateType = function (){
+RobotWarriorGame.RobotCombatant.Player.prototype.generateType = function (){
     var random = Math.round(Math.random() * (this.allowedTypes.length -1))
 
     var randomType = this.allowedTypes[random];
 
-    this.type = new RobotWarrior.RobotType[randomType]()
+    this.type = new RobotWarriorGame.RobotType[randomType]()
 }
 
 /*
@@ -25,23 +25,19 @@ humanoid -----------
 
 Robot Ideas
 
-westworld robots
+westworld robots  - bernard  CHOOSE THIS AS ONE OF TWO
 
-Terminator
+Terminator - CHOOSE THIS AS ONE OF TWO
 
- Data (Star Trek: Th
 
-Bishop, Aliens (1986)
 
 
 
 cartoon robots -------
 
-The Iron Giant
+The Iron Giant  - CHOOSE THIS AS ONE OF TWO
 
-Wall-E
-
-clockwork goblin - Dota 2
+clockwork goblin - Dota 2   - CHOOSE THIS AS ONE OF TWO
 
 
 mechanical-------

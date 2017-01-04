@@ -17,6 +17,7 @@
 // var spell = new Gauntlet.SpellBook.Sphere();
 // console.log("spell: ", spell.toString());
 
+/* Animation library? https://daneden.github.io/animate.css/ */
 
 $(document).ready(function() {
   /*

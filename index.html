@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Gauntlet</title>
+  <title>Robot Thunderdome</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="quiz.css">
@@ -13,25 +13,79 @@
 
   <article id="game-container">
 
+
     <section id="player-setup" class="card card--name">
-      <div class="card__prompt">
-        <div>RECORD YOUR NAME, ADVENTURER</div>
-        <div class="field">
-          <input type="text" autofocus="true" id="player-name" class="field__textinput">
+
+      <div class="container-fluid">
+
+        <!-- Input Card Title -->
+        <div class="row">
+          <div class="player-setup-title">
+            <h1>Welcome to the Robot Thunderdome!</h1>
+            <p>Two Robots Enter.  One Robot Leaves.</p>
+          </div>
         </div>
+
+        <!-- Input Names Row -->
+        <div class="row">
+
+          <!-- Robot One -->
+           <div class="card__prompt col-md-4 col-md-offset-1">
+             <div>Name Your Robot</div>
+             <div class="field">
+               <input type="text" autofocus="true" id="player-name" class="field__textinput">
+             </div>
+
+             <div class="select">
+              <p>Select Your Robot</p>
+              <select>
+                <option>Humanoid: Bernard Hopkins</option>
+                <option>Humanoid: Terminator</option>
+                <option>Mechanical: Johnny 5</option>
+                <option>Mechanical: R2D2</option>
+                <option>Dota2: Tinker</option>
+                <option>Dota2: Clockwerk Goblin</option>
+              </select>
+             </div>
+           </div>
+
+           <!-- Robot Two -->
+           <div class="card__prompt col-md-4 col-md-offset-1">
+             <div>Name the Enemy Robot</div>
+             <div class="field">
+               <input type="text" autofocus="true" id="player-name" class="field__textinput">
+             </div>
+
+             <div class="select">
+              <p>Select Enemy Robot</p>
+              <select>
+                <option>Humanoid: Bernard Hopkins</option>
+                <option>Humanoid: Terminator</option>
+                <option>Mechanical: Johnny 5</option>
+                <option>Mechanical: R2D2</option>
+                <option>Dota2: Tinker</option>
+                <option>Dota2: Clockwerk Goblin</option>
+              </select>
+             </div>
+          </div>
+
+        </div>
+
+        <!-- Select Class button?  Make go to Battlefield? -->
+        <div class="card__button">
+          <a class="card__link btn btn--big btn--orange"
+             href="#"
+             next="card--battleground">
+            <span class="btn__prompt">></span>
+            <span class="btn__text">Scrap Some Metal!</span>
+          </a>
+        </div>
+
       </div>
 
-      <div class="card__button">
-        <a class="card__link btn btn--big btn--orange"
-           href="#"
-           next="card--class">
-          <span class="btn__prompt">></span>
-          <span class="btn__text">Select class</span>
-        </a>
-      </div>
     </section>
 
-    <section id="class-select" class="card card--class">
+    <!-- <section id="class-select" class="card card--class">
       <div class="card__prompt">
         <div>CHOOSE YOUR PATH</div>
         <div>
@@ -47,6 +101,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-4">
+
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue" href="#">
                 <span class="btn__prompt">></span>
@@ -86,7 +141,7 @@
             <span class="btn__text">Back</span>
           </a>
         </div>
-      </div>
+      </div> -->
 
       <div class="card__button">
         <a class="card__link btn btn--big btn--orange"
