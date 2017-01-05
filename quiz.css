@@ -1,166 +1,52 @@
 body {
-  font-family: "Lato", "Helvetica", "sans-serif";
-  margin: 0;
-  padding: 10px;
-  font-size: 3em;
+  color: tomato;
 
-  background-color: black;
-}
+  top: 0; right: 0; bottom: 0; left: 0;
+  position: relative;
 
-.field {
-  margin: 20px 0 0 0;
-}
+  /*background-image: url("../images/thunderdome.jpg");*/
+  /*background-image: url("https://johnkennethmuir.files.wordpress.com/2010/12/thunderdome5.jpg");*/
 
-.field__textinput {
-  font-size: 1em;
-  padding: 15px 0;
+  /*background-image: url("http://d2rormqr1qwzpz.cloudfront.net/photos/2015/06/29/77694-2857922079_d01e6bd668_o.jpg");*/
+
+  /*background: url(images/bg.jpg) no-repeat center center fixed;*/
+  /*background: url(https://teeimp.com/wp-content/uploads/2016/05/Thunderdome-Closeup.jpg) no-repeat center center fixed;*/
+  /*background: url(http://media1.gameinformer.com/filestorage/CommunityServer.Components.SiteFiles/imagefeed/featured/warner-bros/mad-max/newtrailer/madmax5xx.jpg) no-repeat center center fixed;*/
+  background: url(http://www.teamvvv.com/assets/js/ckeditor/kcfinder/upload/images/Mad%20Max%20game%20thunderdome.jpg) no-repeat center center fixed;
+  /*background-size: cover;   or contain*/
+  background-size: cover;
   text-align: center;
-  min-width: 500px;
+  min-height: 97vh;
+  min-width: 98vw;
 }
 
 
-
-/*
-  Section styles
- */
-.card {
-  display: none;
-}
-
-.card__prompt {
-  font-size: 1.1em;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.card__button {
-  font-size: 1.1em;
-  margin: 30px 0 0 0;
-  text-align: center;
-}
-
-
-/*
-  Button styles
- */
-
-.btn {
-  text-decoration: none;
-  background-color: white;
-  color: #888;
-  border-radius: 5px;
-  display: inline-block;
-  margin: 10px;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 10px 5px;
-  min-width: 260px;
-}
-
-.btn--orange {
-  border-color: #FF4136;
-  color: white;
-  background-color: #FF4136;
-}
-
-.btn--blue {
-  border-color: #0074D9;
-  color: white;
-  background-color: #0074D9;
-}
-
-.btn--yellow {
-  border-color: #E4BD00;
-  color: white;
-  background-color: #F3C500;
-}
-
-.btn--big {
-  font-size: 28px;
-  padding: 10px;
-  font-weight: 400;
-}
-
-.btn--small {
-  min-width: 50px;
-}
-
-.btn__prompt {
-  background-color: white;
-  color: #fff;
-  padding-right: 12px;
-  padding-left: 12px;
-  margin-right: -10px;
-  font-weight: 600;
-  background-color: #333;
-  opacity: .4;
-  border-radius: 5px 0 0 5px;
-  left: 37px;
-  float: left;
-}
-
-.btn__text {
-  padding: 0 50px 0 20px;
-  border-radius: 0 5px 5px 0;
+.setupRobot {
+  background-color: rgba(0,0,0,0.5);
 }
 
 /*
-  Player Setup Theme
+
+Keep dark background-color: rgba(0,0,0,0.5);
+Makes background image look better
+
+add overlay of image to make it look darker?
+
+
+Add green neon text to show battle info?
+
 */
 
-#player-setup {
-
-    color: tomato;
-
-    top: 0; right: 0; bottom: 0; left: 0;
-    position: relative;
-
-    /*background-image: url("../images/thunderdome.jpg");*/
-    /*background-image: url("https://johnkennethmuir.files.wordpress.com/2010/12/thunderdome5.jpg");*/
-
-    /*background-image: url("http://d2rormqr1qwzpz.cloudfront.net/photos/2015/06/29/77694-2857922079_d01e6bd668_o.jpg");*/
-
-    /*background: url(images/bg.jpg) no-repeat center center fixed;*/
-    /*background: url(https://teeimp.com/wp-content/uploads/2016/05/Thunderdome-Closeup.jpg) no-repeat center center fixed;*/
-    /*background: url(http://media1.gameinformer.com/filestorage/CommunityServer.Components.SiteFiles/imagefeed/featured/warner-bros/mad-max/newtrailer/madmax5xx.jpg) no-repeat center center fixed;*/
-    background: url(http://www.teamvvv.com/assets/js/ckeditor/kcfinder/upload/images/Mad%20Max%20game%20thunderdome.jpg) no-repeat center center fixed;
-    /*background-size: cover;   or contain*/
-    background-size: cover;
-    text-align: center;
-    min-height: 97vh;
-    min-width: 98vw;
-
-
-}
-
-#thunderdome {
-    color: tomato;
-
-    top: 0; right: 0; bottom: 0; left: 0;
-    position: relative;
-
-    /*background-image: url("../images/thunderdome.jpg");*/
-    /*background-image: url("https://johnkennethmuir.files.wordpress.com/2010/12/thunderdome5.jpg");*/
-
-    /*background-image: url("http://d2rormqr1qwzpz.cloudfront.net/photos/2015/06/29/77694-2857922079_d01e6bd668_o.jpg");*/
-
-    /*background: url(images/bg.jpg) no-repeat center center fixed;*/
-    /*background: url(https://teeimp.com/wp-content/uploads/2016/05/Thunderdome-Closeup.jpg) no-repeat center center fixed;*/
-    /*background: url(http://media1.gameinformer.com/filestorage/CommunityServer.Components.SiteFiles/imagefeed/featured/warner-bros/mad-max/newtrailer/madmax5xx.jpg) no-repeat center center fixed;*/
-    background: url(http://www.teamvvv.com/assets/js/ckeditor/kcfinder/upload/images/Mad%20Max%20game%20thunderdome.jpg) no-repeat center center fixed;
-    /*background-size: cover;   or contain*/
-    background-size: cover;
-    text-align: center;
-    min-height: 98vh;
-    min-width: 95vw;
-}
-
-
-
 .robotInfoBackground {
-  background-color: silver;
-  opacity: .7;
+  /*background-color: silver;*/
+  /*opacity: .5;*/
+  background-color: rgba(0,0,0,0.5);
+  margin: .5em;
+}
+
+
+.battleInfoBackground {
+  /*background-color: black;*/
+  /*opacity: .5;*/
   margin: .5em;
 }
