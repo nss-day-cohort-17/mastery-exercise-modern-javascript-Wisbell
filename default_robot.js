@@ -35,11 +35,9 @@ Thunderdome.Robots = {};
 Thunderdome.Robots.Player = function(name) {
     this.playerName = name
     this.health = null;
-    this.type = null;
     this.attackName = null;
     this.damage = null;
     this.image = null;
-    this.uniqueProperty = null;
 }
 
 /************************************/
@@ -94,7 +92,7 @@ Thunderdome.Robots.HumanoidModelWestWorld = function(name) {
     Thunderdome.Robots.Player.call(this, name)
     this.model = "Bernard Lowe";
     this.attackName = "Reprogram";
-    this.damage = getDamage(20, 30);; //getEnemyRobotsDamage();
+    this.damage = getDamage(20, 30); //getEnemyRobotsDamage();
     this.health = getHealth(100, 150);
 }
 
@@ -116,7 +114,7 @@ Thunderdome.Robots.MechanicalModelR2D2 = function(name) {
     Thunderdome.Robots.Player.call(this, name)
     this.model = "R2D2";
     this.attackName = "Shock";
-    this.damage = getDamage(20, 30);; //getEnemyRobotsDamage();
+    this.damage = getDamage(20, 30)
     this.health = getHealth(100, 150);
 }
 
@@ -138,7 +136,7 @@ Thunderdome.Robots.Dota2ModelClockwerk = function(name) {
     Thunderdome.Robots.Player.call(this, name)
     this.model = "Clockwerk";
     this.attackName = "Hook Shot";
-    this.damage = getDamage(20, 30);; //getEnemyRobotsDamage();
+    this.damage = getDamage(20, 30);
     this.health = getHealth(100, 150);
 }
 
