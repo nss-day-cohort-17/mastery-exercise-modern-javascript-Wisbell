@@ -37,7 +37,7 @@ Thunderdome.Robots.Player = function(name) {
     this.health = null;
     this.attackName = null;
     this.damage = null;
-    this.image = null;
+    this.image = "images/robot-default.jpg";
 }
 
 /************************************/

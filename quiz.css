@@ -156,3 +156,11 @@ body {
     min-height: 98vh;
     min-width: 95vw;
 }
+
+
+
+.robotInfoBackground {
+  background-color: silver;
+  opacity: .7;
+  margin: .5em;
+}

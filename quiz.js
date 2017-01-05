@@ -79,6 +79,9 @@ $(document).ready(function() {
 
       enemyRobot = createRobot(selectedPlayerRobot)
       console.log(enemyRobot)
+
+      // Add player's Robot Information
+      addPlayerInfoToBattle();
     }
 
   })
@@ -103,4 +106,21 @@ function createRobot(selectedPlayerRobot) {
     case "Clockwerk":
       return new Thunderdome.Robots.Dota2ModelClockwerk($("#player-name").val());
   }
+}
+
+
+function addPlayerInfoToBattle(){
+  // Add player name
+  $(".playerRobotName").append(playerRobot.playerName)
+
+  // Add player image
+  $(".playerRobotImage").append(`<img src=${playerRobot.image}>`)
+}
+
+function addEnemyInfoToBattle(){
+  // Add enemy name
+  $(".enemyRobotName").append(enemyRobot.playerName)
+
+  // Add enemy image
+  $(".enemyRobotImage").append(`<img src=${enemyRobot.image}>`)
 }
