@@ -67,21 +67,27 @@ $(document).ready(function() {
     if($("#player-name").val() !== "" && $('#enemy-name').val() !== "") {
       console.log("Both inputs have names");
 
+      // Store select of player and enemy names
+      var playerRobotName = $("#player-name").val();
+      var enemyRobotName = $("#enemy-name").val();
+
+      // Store selected robot for player and enmey
       var selectedPlayerRobot = $(".player-robot").val();
-      console.log("selected player robot", selectedPlayerRobot);
+      var selectedEnemyRobot = $(".enemy-robot").val();
 
       // Create instance for selected player robot
-
-      playerRobot = createRobot(selectedPlayerRobot)
+      playerRobot = createRobot(selectedPlayerRobot, playerRobotName)
       console.log(playerRobot)
 
       // Create instance for selected enemy robot
-
-      enemyRobot = createRobot(selectedPlayerRobot)
+      enemyRobot = createRobot(selectedEnemyRobot, enemyRobotName)
       console.log(enemyRobot)
 
       // Add player's Robot Information
       addPlayerInfoToBattle();
+
+      // Add enemy's Robot Information
+      addEnemyInfoToBattle();
     }
 
   })
@@ -89,22 +95,22 @@ $(document).ready(function() {
 });
 
 
-function createRobot(selectedPlayerRobot) {
+function createRobot(selectedRobot, name) {
   console.log("createRobot function called")
 
-  switch (selectedPlayerRobot) {
+  switch (selectedRobot) {
     case "Bernard Lowe":
-      return new Thunderdome.Robots.HumanoidModelWestWorld($("#player-name").val());
+      return new Thunderdome.Robots.HumanoidModelWestWorld(name);
     case "Terminator":
-      return new Thunderdome.Robots.HumanoidModelTerminator($("#player-name").val());
+      return new Thunderdome.Robots.HumanoidModelTerminator(name);
     case "Johnny 5":
-      return new Thunderdome.Robots.MechanicalModelJohnny5($("#player-name").val());
+      return new Thunderdome.Robots.MechanicalModelJohnny5(name);
     case "R2D2":
-      return new Thunderdome.Robots.MechanicalModelR2D2($("#player-name").val());
+      return new Thunderdome.Robots.MechanicalModelR2D2(name);
     case "Tinker":
-      return new Thunderdome.Robots.Dota2ModelTinker($("#player-name").val());
+      return new Thunderdome.Robots.Dota2ModelTinker(name);
     case "Clockwerk":
-      return new Thunderdome.Robots.Dota2ModelClockwerk($("#player-name").val());
+      return new Thunderdome.Robots.Dota2ModelClockwerk(name);
   }
 }
 
