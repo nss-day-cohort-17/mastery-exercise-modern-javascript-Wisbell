@@ -79,23 +79,23 @@ $(document).ready(function() {
       // Create instance for selected player robot
 
       switch (selectedPlayerRobot) {
-        case "Humanoid: Bernard Lowe":
+        case "Bernard Lowe":
           playerRobot = new Thunderdome.Robots.HumanoidModelWestWorld($("#player-name").val());
           console.log(playerRobot)
           break;
-        case "Humanoid: Terminator":
+        case "Terminator":
           playerRobot = new Thunderdome.Robots.HumanoidModelTerminator($("#player-name").val());
           break;
-        case "Mechanical: Johnny 5":
+        case "Johnny 5":
           playerRobot = new Thunderdome.Robots.MechanicalModelWestWorld($("#player-name").val());
           break;
-        case "Mechanical: R2D2":
+        case "R2D2":
           playerRobot = new Thunderdome.Robots.MechanicalModelWestWorld($("#player-name").val());
           break;
-        case "Dota2: Tinker":
+        case "Tinker":
           playerRobot = new Thunderdome.Robots.HumanoidModelWestWorld($("#player-name").val());
           break;
-        case "Dota2: Clockwerk Goblin":
+        case "Clockwerk":
           playerRobot = new Thunderdome.Robots.HumanoidModelWestWorld($("#player-name").val());
           break;
       }

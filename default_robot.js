@@ -13,14 +13,24 @@
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
+// Move above to Different file?
 
 
-
+/**********************************************/
+/***     Create Thunderdome Game Object     ***/
+/**********************************************/
 
 var Thunderdome = Thunderdome || {};
+
+/******************************************/
+/***     Create Empty Robots Object     ***/
+/******************************************/
+
 Thunderdome.Robots = {};
 
-// Define Base Robot Combatan
+/************************************/
+/***     Define Base Robot        ***/
+/************************************/
 
 Thunderdome.Robots.Player = function(name) {
     this.playerName = name
@@ -32,8 +42,11 @@ Thunderdome.Robots.Player = function(name) {
     this.uniqueProperty = null;
 }
 
-// Define Robot Types
+/************************************/
+/***     Define Robot Types       ***/
+/************************************/
 
+// Humanoid Type
 Thunderdome.Robots.Humanoid = function() {
     this.type = "Humanoid";
     this.model = null;
@@ -44,8 +57,9 @@ Thunderdome.Robots.Humanoid = function() {
     }
 }
 
-Thunderdome.Robots.Humanoid.prototype = new Thunderdome.Robots.Player();
+Thunderdome.Robots.Humanoid.prototype = new Thunderdome.Robots.Player()
 
+// Mechanical Type
 Thunderdome.Robots.Mechanical = function() {
     this.type = "Mechanical";
     this.model = null;
@@ -58,6 +72,7 @@ Thunderdome.Robots.Mechanical = function() {
 
 Thunderdome.Robots.Mechanical.prototype = new Thunderdome.Robots.Player();
 
+// Dota2 Type
 Thunderdome.Robots.Dota2 = function() {
     this.type = "Dota2";
     this.model = null;
@@ -70,8 +85,11 @@ Thunderdome.Robots.Dota2 = function() {
 
 Thunderdome.Robots.Dota2.prototype = new Thunderdome.Robots.Player();
 
-// Define Robot Type Models
+/*******************************/
+/***  Define Robot Models    ***/
+/*******************************/
 
+// Humanoid Models
 Thunderdome.Robots.HumanoidModelWestWorld = function(name) {
     Thunderdome.Robots.Player.call(this, name)
     this.model = "Bernard Lowe";
@@ -80,12 +98,10 @@ Thunderdome.Robots.HumanoidModelWestWorld = function(name) {
     this.health = getHealth(100, 150);
 }
 
-new Thunderdome.Robot.Player(newNameHere)
-
 Thunderdome.Robots.HumanoidModelWestWorld.prototype = new Thunderdome.Robots.Humanoid();
 
 Thunderdome.Robots.HumanoidModelTerminator = function(name) {
-    this.playerName = name;
+    Thunderdome.Robots.Player.call(this, name)
     this.model = "Terminator";
     this.attackName = "Shotgun";
     this.damage = getDamage(30, 40);
@@ -95,35 +111,50 @@ Thunderdome.Robots.HumanoidModelTerminator = function(name) {
 Thunderdome.Robots.HumanoidModelTerminator.prototype = new Thunderdome.Robots.Humanoid();
 
 
-/*
+// Mechanical Models
+Thunderdome.Robots.MechanicalModelR2D2 = function(name) {
+    Thunderdome.Robots.Player.call(this, name)
+    this.model = "R2D2";
+    this.attackName = "Shock";
+    this.damage = getDamage(20, 30);; //getEnemyRobotsDamage();
+    this.health = getHealth(100, 150);
+}
 
-humanoid -----------
+Thunderdome.Robots.HumanoidModelR2D2.prototype = new Thunderdome.Robots.Mechanical();
 
-Robot Ideas
+Thunderdome.Robots.MechanicalModelJohnny5 = function(name) {
+    Thunderdome.Robots.Player.call(this, name)
+    this.model = "Johnny-5";
+    this.attackName = "Slam";
+    this.damage = getDamage(30, 40);
+    this.health = getHealth(100, 200);
+}
 
-westworld robots  - bernard  CHOOSE THIS AS ONE OF TWO
-
-Terminator - CHOOSE THIS AS ONE OF TWO
-
-
-
-
-
-cartoon robots -------
-
-The Iron Giant  - CHOOSE THIS AS ONE OF TWO
-
-clockwork goblin - Dota 2   - CHOOSE THIS AS ONE OF TWO
+Thunderdome.Robots.MechanicalModelJohnny5.prototype = new Thunderdome.Robots.Mechanical();
 
 
-mechanical-------
+// Dota 2 Models
+Thunderdome.Robots.Dota2ModelClockwerk = function(name) {
+    Thunderdome.Robots.Player.call(this, name)
+    this.model = "Clockwerk";
+    this.attackName = "Hook Shot";
+    this.damage = getDamage(20, 30);; //getEnemyRobotsDamage();
+    this.health = getHealth(100, 150);
+}
 
-  Johnny-5, Short Circuit (1986)
+Thunderdome.Robots.Dota2ModelR2D2.prototype = new Thunderdome.Robots.Dota2();
 
-r2d2
+Thunderdome.Robots.Dota2ModelTinker = function(name) {
+    Thunderdome.Robots.Player.call(this, name)
+    this.model = "Tinker";
+    this.attackName = "Heat Seeking Missle";
+    this.damage = getDamage(30, 40);
+    this.health = getHealth(100, 200);
+}
 
-Chappie
-*/
+Thunderdome.Robots.Dota2ModelJohnny5.prototype = new Thunderdome.Robots.Dota2();
+
+
 
 /*
 Robot game
