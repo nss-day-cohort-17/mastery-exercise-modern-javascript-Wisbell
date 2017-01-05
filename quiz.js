@@ -38,12 +38,6 @@ $(document).ready(function() {
     var moveAlong = false;
 
     switch (nextCard) {
-      // case "card--class":
-      //   moveAlong = ($("#player-name").val() !== "");
-      //   break;
-      // case "card--weapon":
-      //   moveAlong = ($("#player-name").val() !== "");
-      //   break;
       case "card--battleground":
         moveAlong = ($("#player-name").val() !== "" && $('#enemy-name').val() !== "");
         break;
@@ -78,31 +72,35 @@ $(document).ready(function() {
 
       // Create instance for selected player robot
 
-      switch (selectedPlayerRobot) {
-        case "Bernard Lowe":
-          playerRobot = new Thunderdome.Robots.HumanoidModelWestWorld($("#player-name").val());
-          console.log(playerRobot)
-          break;
-        case "Terminator":
-          playerRobot = new Thunderdome.Robots.HumanoidModelTerminator($("#player-name").val());
-          break;
-        case "Johnny 5":
-          playerRobot = new Thunderdome.Robots.MechanicalModelWestWorld($("#player-name").val());
-          break;
-        case "R2D2":
-          playerRobot = new Thunderdome.Robots.MechanicalModelWestWorld($("#player-name").val());
-          break;
-        case "Tinker":
-          playerRobot = new Thunderdome.Robots.HumanoidModelWestWorld($("#player-name").val());
-          break;
-        case "Clockwerk":
-          playerRobot = new Thunderdome.Robots.HumanoidModelWestWorld($("#player-name").val());
-          break;
-      }
+      playerRobot = createRobot(selectedPlayerRobot)
+      console.log(playerRobot)
 
       // Create instance for selected enemy robot
+
+      enemyRobot = createRobot(selectedPlayerRobot)
+      console.log(enemyRobot)
     }
 
   })
 
 });
+
+
+function createRobot(selectedPlayerRobot) {
+  console.log("createRobot function called")
+
+  switch (selectedPlayerRobot) {
+    case "Bernard Lowe":
+      return new Thunderdome.Robots.HumanoidModelWestWorld($("#player-name").val());
+    case "Terminator":
+      return new Thunderdome.Robots.HumanoidModelTerminator($("#player-name").val());
+    case "Johnny 5":
+      return new Thunderdome.Robots.MechanicalModelJohnny5($("#player-name").val());
+    case "R2D2":
+      return new Thunderdome.Robots.MechanicalModelR2D2($("#player-name").val());
+    case "Tinker":
+      return new Thunderdome.Robots.Dota2ModelTinker($("#player-name").val());
+    case "Clockwerk":
+      return new Thunderdome.Robots.Dota2ModelClockwerk($("#player-name").val());
+  }
+}

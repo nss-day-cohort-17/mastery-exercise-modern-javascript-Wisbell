@@ -120,7 +120,7 @@ Thunderdome.Robots.MechanicalModelR2D2 = function(name) {
     this.health = getHealth(100, 150);
 }
 
-Thunderdome.Robots.HumanoidModelR2D2.prototype = new Thunderdome.Robots.Mechanical();
+Thunderdome.Robots.MechanicalModelR2D2.prototype = new Thunderdome.Robots.Mechanical();
 
 Thunderdome.Robots.MechanicalModelJohnny5 = function(name) {
     Thunderdome.Robots.Player.call(this, name)
@@ -142,7 +142,7 @@ Thunderdome.Robots.Dota2ModelClockwerk = function(name) {
     this.health = getHealth(100, 150);
 }
 
-Thunderdome.Robots.Dota2ModelR2D2.prototype = new Thunderdome.Robots.Dota2();
+Thunderdome.Robots.Dota2ModelClockwerk.prototype = new Thunderdome.Robots.Dota2();
 
 Thunderdome.Robots.Dota2ModelTinker = function(name) {
     Thunderdome.Robots.Player.call(this, name)
@@ -152,7 +152,7 @@ Thunderdome.Robots.Dota2ModelTinker = function(name) {
     this.health = getHealth(100, 200);
 }
 
-Thunderdome.Robots.Dota2ModelJohnny5.prototype = new Thunderdome.Robots.Dota2();
+Thunderdome.Robots.Dota2ModelTinker.prototype = new Thunderdome.Robots.Dota2();
 
 
 
