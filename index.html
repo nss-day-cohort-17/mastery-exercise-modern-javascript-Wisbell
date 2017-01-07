@@ -13,12 +13,11 @@
 
   <article id="game-container">
 
-
-    <section id="player-setup" class="card card--name">
+    <section id="robot-setup-section" class="card card--name">
 
       <div class="container-fluid">
 
-        <!-- Input Card Title -->
+        <!-- Main Page Title Row -->
         <div class="row">
           <div class="player-setup-title">
             <h1>Welcome to the Robot Thunderdome!</h1>
@@ -26,51 +25,97 @@
           </div>
         </div>
 
-        <!-- Input Names Row -->
+        <!-- Input Robots Row -->
         <div class="row">
 
-          <!-- Robot One -->
-           <div class="setupRobot col-md-4 col-md-offset-1">
-             <div>Name Your Robot</div>
-             <div class="field">
-               <input type="text" autofocus="true" id="player-name" class="field__textinput">
-             </div>
+          <!-- *************************** -->
+          <!-- *******  Robot One  ******* -->
+          <!-- *************************** -->
+          <div class="robot--background-color col-md-4 col-md-offset-1">
 
-             <div class="select">
+            <!-- Robot One - Enter Name Div -->
+            <div class="robot__enter-name">
+              <p>Name Your Robot</p>
+              <input type="text" autofocus="true" id="player-name" class="field__textinput">
+            </div>
+
+            <!-- Robot One - Show Selected Robot Picture -->
+            <div class="robot__show-selected-robot">
+              <!-- Input Default Picture -->
+              <img src="http://clipart-library.com/data_images/402965.png" class="robot__image">
+            </div>
+
+            <!-- Robot One - Select Robot Div -->
+            <div class="robot__select-robot">
               <p>Select Your Robot</p>
+
               <select class="player-robot">
-                <option>Bernard Lowe</option>
-                <option>Terminator</option>
-                <option>Johnny 5</option>
-                <option>R2D2</option>
-                <option>Tinker</option>
-                <option>Clockwerk</option>
+
+                <option>Choose a Robot</option>
+
+                <optgroup label="Humanoid">
+                  <option>Bernard Lowe</option>
+                  <option>Terminator</option>
+                </optgroup>
+
+                <optgroup label="Mechanical">
+                  <option>Johnny 5</option>
+                  <option>R2D2</option>
+                </optgroup>
+
+                <optgroup label="Dota2">
+                  <option>Tinker</option>
+                  <option>Clockwerk</option>
+                </optgroup>
+
               </select>
-             </div>
 
-           </div>
+            <!-- Robot One - selected robot description -->
+            <div class="robot__selected-robot-description">
+              <p>Description</p>
+            </div>
 
-           <!-- Robot Two -->
-           <div class="setupRobot col-md-4 col-md-offset-1">
-             <div>Name the Enemy Robot</div>
-             <div class="field">
-               <input type="text" autofocus="true" id="enemy-name" class="field__textinput">
-             </div>
+            </div> <!-- closes robot ONE select-robot div -->
+          </div> <!-- closes robot ONE robot__setup div -->
 
-             <div class="select">
-              <p>Select Enemy Robot</p>
-              <select class="enemy-robot">
-                <option>Bernard Lowe</option>
-                <option>Terminator</option>
-                <option>Johnny 5</option>
-                <option>R2D2</option>
-                <option>Tinker</option>
-                <option>Clockwerk</option>
+
+          <!-- *************************** -->
+          <!-- *******  Robot Two  ******* -->
+          <!-- *************************** -->
+          <div class="robot__setup col-md-4 col-md-offset-1">
+
+            <!-- Robot Two - Enter Name Div -->
+            <div class="robot__enter-name">
+              <p>Name Your Robot</p>
+              <input type="text" autofocus="true" id="player-name" class="field__textinput">
+            </div>
+
+            <!-- Robot Two - Select Robot Div -->
+            <div class="robot__select-robot">
+              <p>Select Your Robot</p>
+
+              <select class="player-robot">
+
+                <optgroup label="Humanoid">
+                  <option>Bernard Lowe</option>
+                  <option>Terminator</option>
+                </optgroup>
+
+                <optgroup label="Mechanical">
+                  <option>Johnny 5</option>
+                  <option>R2D2</option>
+                </optgroup>
+
+                <optgroup label="Dota2">
+                  <option>Tinker</option>
+                  <option>Clockwerk</option>
+                </optgroup>
+
               </select>
-             </div>
-          </div>
+            </div> <!-- closes robot TWO select-robot div -->
+          </div> <!-- closes robot TWO robot__setup div -->
 
-        </div>
+        </div> <!-- closes Input Robots row div -->
 
         <!-- Select Class button?  Make go to Battlefield? -->
         <div class="card__button">
@@ -90,11 +135,6 @@
   </article>
 
   <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-<!--   <script src="javascripts/weapons.js"></script>
-  <script src="javascripts/classes.js"></script>
-  <script src="javascripts/spells.js"></script>
-  <script src="javascripts/player.js"></script>
-  <script src="javascripts/enemies.js"></script> -->
   <script src="default_robot.js"></script>
   <script src="quiz.js"></script>
 

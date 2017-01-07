@@ -1,17 +1,9 @@
 body {
-  color: tomato;
+  color: goldenrod;
 
   top: 0; right: 0; bottom: 0; left: 0;
   position: relative;
 
-  /*background-image: url("../images/thunderdome.jpg");*/
-  /*background-image: url("https://johnkennethmuir.files.wordpress.com/2010/12/thunderdome5.jpg");*/
-
-  /*background-image: url("http://d2rormqr1qwzpz.cloudfront.net/photos/2015/06/29/77694-2857922079_d01e6bd668_o.jpg");*/
-
-  /*background: url(images/bg.jpg) no-repeat center center fixed;*/
-  /*background: url(https://teeimp.com/wp-content/uploads/2016/05/Thunderdome-Closeup.jpg) no-repeat center center fixed;*/
-  /*background: url(http://media1.gameinformer.com/filestorage/CommunityServer.Components.SiteFiles/imagefeed/featured/warner-bros/mad-max/newtrailer/madmax5xx.jpg) no-repeat center center fixed;*/
   background: url(http://www.teamvvv.com/assets/js/ckeditor/kcfinder/upload/images/Mad%20Max%20game%20thunderdome.jpg) no-repeat center center fixed;
   /*background-size: cover;   or contain*/
   background-size: cover;
@@ -20,10 +12,16 @@ body {
   min-width: 98vw;
 }
 
+/* Robot Setup */
 
-.setupRobot {
+.robot--background-color {
   background-color: rgba(0,0,0,0.5);
 }
+
+.robot__image {
+  height: 50vh;
+}
+
 
 /*
 
