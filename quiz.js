@@ -21,6 +21,8 @@ var testRobot = new Thunderdome.Robots.HumanoidModelTerminator("Termie");
 var playerRobot;
 var enemyRobot;
 
+
+
 /* Animation library? https://daneden.github.io/animate.css/ */
 
 $(document).ready(function() {
@@ -67,6 +69,11 @@ $(document).ready(function() {
     if($("#player-name").val() !== "" && $('#enemy-name').val() !== "") {
       console.log("Both inputs have names");
 
+      console.log("test", $('#player-setup'))
+
+      $('#robot-setup-section').hide()
+      $('#thunderdome-section').show()
+
       // Store select of player and enemy names
       var playerRobotName = $("#player-name").val();
       var enemyRobotName = $("#enemy-name").val();
@@ -84,15 +91,18 @@ $(document).ready(function() {
       console.log(enemyRobot)
 
       // Add player's Robot Information
-      addPlayerInfoToBattle();
+      //addPlayerInfoToBattle();
 
       // Add enemy's Robot Information
-      addEnemyInfoToBattle();
+      //addEnemyInfoToBattle();
     }
 
   })
 
 });
+
+
+// Add event listener to player robot selection
 
 
 function createRobot(selectedRobot, name) {

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Robot Thunderdome</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="quiz.css">
 </head>
 
@@ -13,13 +13,13 @@
 
   <article id="game-container">
 
-    <section id="robot-setup-section" class="card card--name">
+    <section id="robot-setup-section">
 
       <div class="container-fluid">
 
         <!-- Main Page Title Row -->
         <div class="row">
-          <div class="player-setup-title">
+          <div class="robot--background-color player-setup-title col-md-offset-4 col-md-4">
             <h1>Welcome to the Robot Thunderdome!</h1>
             <p>Two Robots Enter.  One Robot Leaves.</p>
           </div>
@@ -42,7 +42,143 @@
             <!-- Robot One - Show Selected Robot Picture -->
             <div class="robot__show-selected-robot">
               <!-- Input Default Picture -->
-              <img src="http://clipart-library.com/data_images/402965.png" class="robot__image">
+              <img src="images/stupid_robot.png" class="robot__image">
+            </div>
+
+            <!-- Robot One - Select Robot Div -->
+            <div class="robot__select-robot">
+              <p>Select Your Robot</p>
+
+              <select class="robot__player-robot-choice">
+
+                <option>Choose a Robot</option>
+
+                <optgroup label="Humanoid">
+                  <option>Bernard Lowe</option>
+                  <option>Terminator</option>
+                </optgroup>
+
+                <optgroup label="Mechanical">
+                  <option>Johnny 5</option>
+                  <option>R2D2</option>
+                </optgroup>
+
+                <optgroup label="Dota2">
+                  <option>Tinker</option>
+                  <option>Clockwerk</option>
+                </optgroup>
+
+              </select>
+
+            <!-- Robot One - selected robot description -->
+            <div class="robot__selected-robot-description">
+              <p>Description</p>
+            </div>
+
+            </div> <!-- closes robot ONE select-robot div -->
+          </div> <!-- closes robot ONE robot__setup div -->
+
+
+          <!-- *************************** -->
+          <!-- *******  Robot Two  ******* -->
+          <!-- *************************** -->
+          <div class="robot--background-color col-md-4 col-md-offset-1">
+
+            <!-- Robot One - Enter Name Div -->
+            <div class="robot__enter-name">
+              <p>Name Your Robot</p>
+              <input type="text" autofocus="true" id="player-name" class="field__textinput">
+            </div>
+
+            <!-- Robot One - Show Selected Robot Picture -->
+            <div class="robot__show-selected-robot">
+              <!-- Input Default Picture -->
+              <img src="images/stupid_robot.png" class="robot__image">
+            </div>
+
+            <!-- Robot One - Select Robot Div -->
+            <div class="robot__select-robot">
+              <p>Select Your Robot</p>
+
+              <select class="player-robot">
+
+                <option>Choose a Robot</option>
+
+                <optgroup label="Humanoid">
+                  <option>Bernard Lowe</option>
+                  <option>Terminator</option>
+                </optgroup>
+
+                <optgroup label="Mechanical">
+                  <option>Johnny 5</option>
+                  <option>R2D2</option>
+                </optgroup>
+
+                <optgroup label="Dota2">
+                  <option>Tinker</option>
+                  <option>Clockwerk</option>
+                </optgroup>
+
+              </select>
+
+            <!-- Robot One - selected robot description -->
+            <div class="robot__selected-robot-description">
+              <p>Description</p>
+            </div>
+
+            </div> <!-- closes robot ONE select-robot div -->
+          </div> <!-- closes robot ONE robot__setup div -->
+
+      </div>
+
+      <!-- Begin Battle Button Row -->
+      <div class="row">
+        <!-- Begin Battle Button Div -->
+        <div class="robot--background-color col-md-offset-4 col-md-3">
+          <a class="beginBattle"
+             href="#"
+             next="card--battleground">
+            <span class="btn__prompt">></span>
+            <span class="btn__text">Scrap Some Metal!</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- +++++++++++++++++ -->
+    <!-- Thunder Dome View -->
+    <!-- +++++++++++++++++ -->
+
+    <section id="thunderdome-section" class="card card--name">
+
+      <div class="container-fluid">
+
+        <!-- Thunderdome Main Message Div -->
+        <div class="row">
+          <div class="robot--background-color player-setup-title col-md-offset-4 col-md-4">
+            <h1>Begin the fight! TESTING</h1>
+          </div>
+        </div>
+
+        <!-- Input Robots Row -->
+        <div class="row">
+
+          <!-- *************************** -->
+          <!-- *******  Robot One  ******* -->
+          <!-- *************************** -->
+          <div class="robot--background-color col-md-4 col-md-offset-1">
+
+            <!-- Robot One - Enter Name Div -->
+            <div class="robot__enter-name">
+              <p>Name Your Robot</p>
+              <input type="text" autofocus="true" id="player-name" class="field__textinput">
+            </div>
+
+            <!-- Robot One - Show Selected Robot Picture -->
+            <div class="robot__show-selected-robot">
+              <!-- Input Default Picture -->
+              <img src="images/stupid_robot.png" class="robot__image">
             </div>
 
             <!-- Robot One - Select Robot Div -->
@@ -82,19 +218,27 @@
           <!-- *************************** -->
           <!-- *******  Robot Two  ******* -->
           <!-- *************************** -->
-          <div class="robot__setup col-md-4 col-md-offset-1">
+          <div class="robot--background-color col-md-4 col-md-offset-1">
 
-            <!-- Robot Two - Enter Name Div -->
+            <!-- Robot One - Enter Name Div -->
             <div class="robot__enter-name">
               <p>Name Your Robot</p>
               <input type="text" autofocus="true" id="player-name" class="field__textinput">
             </div>
 
-            <!-- Robot Two - Select Robot Div -->
+            <!-- Robot One - Show Selected Robot Picture -->
+            <div class="robot__show-selected-robot">
+              <!-- Input Default Picture -->
+              <img src="images/stupid_robot.png" class="robot__image">
+            </div>
+
+            <!-- Robot One - Select Robot Div -->
             <div class="robot__select-robot">
               <p>Select Your Robot</p>
 
               <select class="player-robot">
+
+                <option>Choose a Robot</option>
 
                 <optgroup label="Humanoid">
                   <option>Bernard Lowe</option>
@@ -112,21 +256,28 @@
                 </optgroup>
 
               </select>
-            </div> <!-- closes robot TWO select-robot div -->
-          </div> <!-- closes robot TWO robot__setup div -->
 
-        </div> <!-- closes Input Robots row div -->
+            <!-- Robot One - selected robot description -->
+            <div class="robot__selected-robot-description">
+              <p>Description</p>
+            </div>
 
-        <!-- Select Class button?  Make go to Battlefield? -->
-        <div class="card__button">
-          <a class="beginBattle card__link btn btn--big btn--orange"
+            </div> <!-- closes robot ONE select-robot div -->
+          </div> <!-- closes robot ONE robot__setup div -->
+
+      </div>
+
+      <!-- Begin Battle Button Row -->
+      <div class="row">
+        <!-- Begin Battle Button Div -->
+        <div class="robot--background-color col-md-offset-4 col-md-3">
+          <a class="beginBattle"
              href="#"
              next="card--battleground">
             <span class="btn__prompt">></span>
             <span class="btn__text">Scrap Some Metal!</span>
           </a>
         </div>
-
       </div>
 
     </section>
@@ -134,7 +285,8 @@
 
   </article>
 
-  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <!-- <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script> -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="default_robot.js"></script>
   <script src="quiz.js"></script>
 

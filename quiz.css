@@ -1,10 +1,11 @@
 body {
-  color: goldenrod;
+  color: tomato;
 
   top: 0; right: 0; bottom: 0; left: 0;
   position: relative;
 
-  background: url(http://www.teamvvv.com/assets/js/ckeditor/kcfinder/upload/images/Mad%20Max%20game%20thunderdome.jpg) no-repeat center center fixed;
+  /*background: url(http://www.teamvvv.com/assets/js/ckeditor/kcfinder/upload/images/Mad%20Max%20game%20thunderdome.jpg) no-repeat center center fixed;*/
+  background: url(images/thunderdome_main.jpg) no-repeat center center fixed;
   /*background-size: cover;   or contain*/
   background-size: cover;
   text-align: center;
@@ -19,8 +20,16 @@ body {
 }
 
 .robot__image {
-  height: 50vh;
+  height: 40vh;
 }
+
+
+#thunderdome-section {
+  display: none;
+}
+
+
+
 
 
 /*
@@ -34,17 +43,3 @@ add overlay of image to make it look darker?
 Add green neon text to show battle info?
 
 */
-
-.robotInfoBackground {
-  /*background-color: silver;*/
-  /*opacity: .5;*/
-  background-color: rgba(0,0,0,0.5);
-  margin: .5em;
-}
-
-
-.battleInfoBackground {
-  /*background-color: black;*/
-  /*opacity: .5;*/
-  margin: .5em;
-}
