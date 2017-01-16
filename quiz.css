@@ -20,7 +20,10 @@ body {
 }
 
 .robot__image {
-  height: 40vh;
+  max-height: 40vh;
+  max-width: 90%;
+  height: auto;
+  width: auto;
 }
 
 

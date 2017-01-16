@@ -52,13 +52,23 @@ $(document).ready(function(){
 
 })
 
-// Add event listener on robot selection to show appropiate robot descriptions
+// Add event listener on player robot selection to show appropiate robot descriptions
 $('.robot__player-robot-choice').change(function(){
     console.log("player changed chosen robot")
 
     var playerRobotChoice = $('.robot__player-robot-choice').find(":selected").text();
 
     changeRobotDescriptionAndImage("player", playerRobotChoice)
+})
+
+
+// Add event listener on enemy robot selection to show appropiate robot descriptions
+$('.robot__enemy-robot-choice').change(function(){
+    console.log("enemy changed chosen robot")
+
+    var enemyRobotChoice = $('.robot__enemy-robot-choice').find(":selected").text();
+
+    changeRobotDescriptionAndImage("enemy", enemyRobotChoice)
 })
 
 
@@ -162,14 +172,14 @@ function changeRobotDescriptionAndImage(playerOrEnemyDescription, robotChoice ){
               break;
             case "Tinker":
               // Add picture
-              $('.robot__player-robot-image').html('<img src="images/bernard for character thread_zpsw3i8zrug.jpg" class="robot__image"/>')
+              $('.robot__player-robot-image').html('<img src="images/Tinker-Dota-2-1.jpg" class="robot__image"/>')
               // Add description
               $('.robot__player-robot-description').html(`<p>Description</p>
                                                         <p>Tinker is a robot who excels in rocketry and lasers</p>`)
               break;
             case "Clockwerk":
               // Add picture
-              $('.robot__player-robot-image').html('<img src="images/bernard for character thread_zpsw3i8zrug.jpg" class="robot__image"/>')
+              $('.robot__player-robot-image').html('<img src="images/Clockwerk-Dota-2-3.png" class="robot__image"/>')
               // Add description
               $('.robot__player-robot-description').html(`<p>Description</p>
                                                         <p>Clockwerk Goblin is a robot who is an expert in close combat</p>`)
@@ -185,7 +195,62 @@ function changeRobotDescriptionAndImage(playerOrEnemyDescription, robotChoice ){
         }
 
     } else if (playerOrEnemyDescription === "enemy"){
-        // clear enemy robot description div
+
+        // clear player robot description div and image div
         $(".robot__enemy-robot-description").empty()
+        $(".robot__enemy-robot-image").empty()
+
+        switch (robotChoice) {
+            case "Bernard Lowe":
+              // Add picture
+              $('.robot__enemy-robot-image').html('<img src="images/bernard for character thread_zpsw3i8zrug.jpg" class="robot__image"/>')
+              // Add description
+              $('.robot__enemy-robot-description').html(`<p>Description</p>
+                                                        <p>Bernard Lowe is a robot who excels in re-programming other robots.</p>`)
+              break;
+            case "Terminator":
+              // Add picture
+              $('.robot__enemy-robot-image').html('<img src="images/166404_006.jpg" class="robot__image"/>')
+              // Add description
+              $('.robot__enemy-robot-description').html(`<p>Description</p>
+                                                        <p>Terminator is a robot made by machines who will always be back.</p>`)
+              break;
+            case "Johnny 5":
+              // Add picture
+              $('.robot__enemy-robot-image').html('<img src="images/4006740-9829399991-Numbe.jpg" class="robot__image"/>')
+              // Add description
+              $('.robot__enemy-robot-description').html(`<p>Description</p>
+                                                        <p>Johnny 5 is a robot that was struck by lightning and gained sentience</p>`)
+              break;
+            case "R2D2":
+              // Add picture
+              $('.robot__enemy-robot-image').html('<img src="images/r2d2-625x350.jpg" class="robot__image"/>')
+              // Add description
+              $('.robot__enemy-robot-description').html(`<p>Description</p>
+                                                        <p>R2D2 is an older robot who started off fighting in spaceships and will never stop helping his friends</p>`)
+              break;
+            case "Tinker":
+              // Add picture
+              $('.robot__enemy-robot-image').html('<img src="images/Tinker-Dota-2-1.jpg" class="robot__image"/>')
+              // Add description
+              $('.robot__enemy-robot-description').html(`<p>Description</p>
+                                                        <p>Tinker is a robot who excels in rocketry and lasers</p>`)
+              break;
+            case "Clockwerk":
+              // Add picture
+              $('.robot__enemy-robot-image').html('<img src="images/Clockwerk-Dota-2-3.png" class="robot__image"/>')
+              // Add description
+              $('.robot__enemy-robot-description').html(`<p>Description</p>
+                                                        <p>Clockwerk Goblin is a robot who is an expert in close combat</p>`)
+              break;
+            default:
+              // show default robot/description
+
+              // Add picture
+              $('.robot__enemy-robot-image').html('<img src="images/stupid_robot.png" class="robot__image"/>')
+              // Add description
+              $('.robot__enemy-robot-description').html(`<p>Description</p>
+                                                        <p>Hi, please selected a robot from the above select menu.</p>`)
+          }
     }
 }
