@@ -10,11 +10,14 @@ var enemyRobot;
 // When document is ready
 $(document).ready(function(){
 
+    var playerName = $("#player-name").val();
+    var EnemyName = $("#enemy-name").val();
+
     /*
     Show the initial view that accepts player name
    */
-    $('robot-setup-section').show()
-    $('thunderdome-section').hide()
+    $('#robot-setup-section').show()
+    $('#thunderdome-section').hide()
 
 
     // Add event listener to go to battledome button
@@ -36,8 +39,8 @@ $(document).ready(function(){
 
             // show thunder dome
 
-            $('player-setup').hide()
-            $('thunderdome-section').show()
+            $('#robot-setup-section').hide()
+            $('#thunderdome-section').show()
         }
 
         // add player robot information to thunderdome player div
@@ -52,23 +55,27 @@ $(document).ready(function(){
 // Check if bother players chose names
 function checkPlayerNames(){
     if ($("#player-name").val() !== '' && $('#enemy-name').val() !== ''){
+        console.log("checkplayerName is true")
         return  true
     } else {
+        console.log("checkplayerName is false")
         return false
     }
 }
 
 // check if both players chose robots
 function checkPlayerRobots() {
-    var robot1 = $('.player-robot')
-    var robot2 = $('.enemy-robot')
+    var robot1 = $('.robot__player-robot-choice').find(":selected").text();
+    var robot2 = $('.robot__enemy-robot-choice').find(":selected").text();
+    var choiceText = 'Choose a Robot'
 
-    console.log("robot1", robot1)
-    console.log("robot2", robot2)
-
-    // if () {
-
-    // }
+    if (robot1 !== choiceText && robot2 !== choiceText) {
+        console.log("check player robot is true")
+        return true;
+    } else {
+        console.log("checkplayer robot is false")
+        return false;
+    }
 }
 
 
