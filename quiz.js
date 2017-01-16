@@ -39,9 +39,11 @@ $(document).ready(function() {
     var nextCard = $(this).attr("next");
     var moveAlong = false;
 
+    console.log("playerChoice", $('robot__player-robot-choice').val())
+
     switch (nextCard) {
       case "card--battleground":
-        moveAlong = ($("#player-name").val() !== "" && $('#enemy-name').val() !== "");
+        moveAlong = ($("#player-name").val() !== "" && $('#enemy-name').val() !== "" && $('robot__player-robot-choice').val() !== 'Choose a Robot' && $('robot__enemy-robot-choice').val() !== 'Choose a Robot');
         break;
     }
 
@@ -103,6 +105,30 @@ $(document).ready(function() {
 
 
 // Add event listener to player robot selection
+$('.robot__player-robot-choice').change(function(){
+  var selectedRobot = $('.robot__player-robot-choice').val()
+  console.log(selectedRobot)
+
+  switch (selectedRobot) {
+    case "Bernard Lowe":
+      // Add picture
+      $('')
+      // Add description
+      $('')
+    case "Terminator":
+      return new Thunderdome.Robots.HumanoidModelTerminator(name);
+    case "Johnny 5":
+      return new Thunderdome.Robots.MechanicalModelJohnny5(name);
+    case "R2D2":
+      return new Thunderdome.Robots.MechanicalModelR2D2(name);
+    case "Tinker":
+      return new Thunderdome.Robots.Dota2ModelTinker(name);
+    case "Clockwerk":
+      return new Thunderdome.Robots.Dota2ModelClockwerk(name);
+    default:
+      // show default robot/description
+  }
+})
 
 
 function createRobot(selectedRobot, name) {
