@@ -37,7 +37,7 @@ Thunderdome.Robots.Player = function(name) {
     this.health = null;
     this.attackName = null;
     this.damage = null;
-    this.image = "images/robot-default.jpg";
+    this.image = "images/stupid_robot.png";
 }
 
 /************************************/
@@ -93,7 +93,8 @@ Thunderdome.Robots.HumanoidModelWestWorld = function(name) {
     this.model = "Bernard Lowe";
     this.attackName = "Reprogram";
     this.damage = getDamage(20, 30); //getEnemyRobotsDamage();
-    this.health = getHealth(100, 150);
+    this.health = getHealth(80, 150);
+    this.image = "images/bernard%20for%20character%20thread_zpsw3i8zrug.jpg";
 }
 
 Thunderdome.Robots.HumanoidModelWestWorld.prototype = new Thunderdome.Robots.Humanoid();
@@ -104,6 +105,7 @@ Thunderdome.Robots.HumanoidModelTerminator = function(name) {
     this.attackName = "Shotgun";
     this.damage = getDamage(30, 40);
     this.health = getHealth(100, 200);
+    this.image = "images/166404_006.jpg"
 }
 
 Thunderdome.Robots.HumanoidModelTerminator.prototype = new Thunderdome.Robots.Humanoid();
@@ -114,8 +116,9 @@ Thunderdome.Robots.MechanicalModelR2D2 = function(name) {
     Thunderdome.Robots.Player.call(this, name)
     this.model = "R2D2";
     this.attackName = "Shock";
-    this.damage = getDamage(20, 30)
+    this.damage = getDamage(10, 50)
     this.health = getHealth(100, 150);
+    this.image = "images/r2d2-625x350.jpg"
 }
 
 Thunderdome.Robots.MechanicalModelR2D2.prototype = new Thunderdome.Robots.Mechanical();
@@ -124,8 +127,9 @@ Thunderdome.Robots.MechanicalModelJohnny5 = function(name) {
     Thunderdome.Robots.Player.call(this, name)
     this.model = "Johnny-5";
     this.attackName = "Slam";
-    this.damage = getDamage(30, 40);
-    this.health = getHealth(100, 200);
+    this.damage = getDamage(30, 35);
+    this.health = getHealth(90, 200);
+    this.image = "images/4006740-9829399991-Numbe.jpg"
 }
 
 Thunderdome.Robots.MechanicalModelJohnny5.prototype = new Thunderdome.Robots.Mechanical();
@@ -138,6 +142,7 @@ Thunderdome.Robots.Dota2ModelClockwerk = function(name) {
     this.attackName = "Hook Shot";
     this.damage = getDamage(20, 30);
     this.health = getHealth(100, 150);
+    this.image = "images/Clockwerk-Dota-2-3.png";
 }
 
 Thunderdome.Robots.Dota2ModelClockwerk.prototype = new Thunderdome.Robots.Dota2();
@@ -148,6 +153,7 @@ Thunderdome.Robots.Dota2ModelTinker = function(name) {
     this.attackName = "Heat Seeking Missle";
     this.damage = getDamage(30, 40);
     this.health = getHealth(100, 200);
+    this.image = "images/Tinker-Dota-2-1.jpg"
 }
 
 Thunderdome.Robots.Dota2ModelTinker.prototype = new Thunderdome.Robots.Dota2();

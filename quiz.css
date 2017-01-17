@@ -31,7 +31,10 @@ body {
   display: none;
 }
 
-
+.thunderdome-robot-div {
+  height: 90vh;
+  margin-left: 5em;
+}
 
 
 

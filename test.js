@@ -11,7 +11,7 @@ var enemyRobot;
 $(document).ready(function(){
 
     var playerName = $("#player-name").val();
-    var EnemyName = $("#enemy-name").val();
+    var enemyName = $("#enemy-name").val();
 
     /*
     Show the initial view that accepts player name
@@ -33,9 +33,18 @@ $(document).ready(function(){
 
         // if both true make selected robot instances
         if(namesChosen && robotsChosen){
-            // add player robot information to thunderdome player div
+            playerName = $("#player-name").val()
+            enemyName = $("#enemy-name").val()
+            var selectedPlayerRobot = $('.robot__player-robot-choice').find(":selected").text()
+            var selectedEnemyRobot = $('.robot__enemy-robot-choice').find(":selected").text()
 
-            // add enemy robot information to thunderome enemy div
+            // make player and add robot information to thunderdome player div
+            playerRobot = createRobot(selectedPlayerRobot, playerName)
+            addPlayerInfoToThunderdome()
+
+            // make enemy and add enemy robot information to thunderome enemy div
+            enemyRobot = createRobot(selectedEnemyRobot, enemyName)
+
 
             // show thunder dome
 
@@ -43,11 +52,6 @@ $(document).ready(function(){
             $('#thunderdome-section').show()
         }
 
-        // add player robot information to thunderdome player div
-
-        // add enemy robot information to thunderome enemy div
-
-        // show thunder dome
     })
 
 })
@@ -122,7 +126,7 @@ function createRobot(selectedRobot, name) {
 
 
 
-// Change robot description
+// Change robot description and image
 
 function changeRobotDescriptionAndImage(playerOrEnemyDescription, robotChoice ){
 
@@ -253,4 +257,13 @@ function changeRobotDescriptionAndImage(playerOrEnemyDescription, robotChoice ){
                                                         <p>Hi, please selected a robot from the above select menu.</p>`)
           }
     }
+}
+
+
+function addPlayerInfoToThunderdome(){
+  // Add player name
+  $(".thunderdome__player-name").html(`<h3>${playerRobot.playerName}</h3>`)
+
+  // Add player image
+  $(".thunderdome__player-image").html(`<img src=${playerRobot.image}>`)
 }
